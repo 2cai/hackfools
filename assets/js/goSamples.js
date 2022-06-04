@@ -1,27 +1,5 @@
 window.byId = (id) => { return document.getElementById(id); }
 document.addEventListener("DOMContentLoaded", function() {
-  var p1 = document.createElement("p");
-  window.dirName = location.pathname.split('/').slice(-2);
-  window.samplePath = dirName.join('/'); // dir/name.html
-  p1.innerHTML = "<a href='https://github.com/NorthwoodsSoftware/GoJS/blob/master/" +
-                samplePath + "' target='_blank'>View this sample page's source on GitHub</a>";
-  byId("sample").parentElement.appendChild(p1);
-  window.b1 = document.createElement("button");
-  window.b2 = document.createElement("button");
-  b1.onclick = goViewSource;
-  b2.onclick = goDownload;
-  b1.innerText = "View the code for this sample in-page";
-  b2.innerText = "Download the HTML and JS to use as a starting point";
-  byId("sample").parentElement.appendChild(b1);
-  byId("sample").parentElement.appendChild(b2);
-
-  var copyright = 'Copyright 1998-2022 by Northwoods Software.';
-  var p2 = document.createElement("p");
-  p2.classList = "text-xs";
-  p2.innerHTML = (window.go) ? 'GoJS version ' + go.version + '. ' + copyright : copyright;
-  byId("sample").appendChild(p2);
-
-  byId("navSide").innerHTML = (dirName[0] === 'samples') ? (navContent + navContent2) : (navContent + navContentExtensions);
   var sidebutton = byId("navButton");
   var navList = byId("navList");
   sidebutton.addEventListener("click", function() {
