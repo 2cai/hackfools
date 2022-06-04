@@ -11,7 +11,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 </style>
 </head>
 
-<body>
+<body style="background-image:url('try2.webp');background-size:cover">
 <!-- This top nav is not part of the sample code -->
 <div class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
 <div id="navSide" class="flex flex-col w-full md:w-48 text-gray-700 bg-white flex-shrink-0"></div>
@@ -70,7 +70,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
     tool.temporaryShape.fill = null;
     tool.temporaryShape.stroke = "black";
     tool.temporaryShape.strokeWidth = 1;
-    if (draw) myDiagram.currentTool = tool;
+    myDiagram.currentTool = tool;
   }
 
   // this command ends the PolygonDrawingTool
@@ -107,8 +107,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
   window.addEventListener('DOMContentLoaded', init);
 </script>
 <!-- Navbar (Sits on top) -->
-<div class="w3-top w3-bar w3-xlarge w3-black w3-opacity-min">
-  <div id="buttons">
+<div class="w3-top w3-bar w3-xlarge w3-black ">
+  <div id="buttons" style="display: flex; justify-content: center">
     <button class="w3-bar-item w3-button" onclick="mode()">Selecionar Formato</button>
     <button class="w3-bar-item w3-button" onclick="finish(true)">Veja a sua Pizza</button>
     <button class="w3-bar-item w3-button" onclick="restart()">Recomeçar</button>
@@ -118,11 +118,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
         }
     </script>
     <button class="w3-bar-item w3-button" onclick="undo()">Desfazer</button>
+    <button class="w3-bar-item w3-button" onclick="finish_order()">Finalizar pedido</button>
+    <script>
+        function finish_order(){
+            alert("SUA PIZZA FICOU MARAVILHOSAAAAA. CONFIRMAREMOS SEU PEDIDO EM BREVE !!! OBRIGADO POR COMPRAR COM A GENTE S2 S2.")
+            url = "https://www.google.com/search?q=joinha+&tbm=isch&ved=2ahUKEwjojM32kZT4AhWLA7kGHU32A-wQ2-cCegQIABAA&oq=joinha+&gs_lcp=CgNpbWcQAzIICAAQgAQQsQMyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgARQhBNYnB5gkiBoAHAAeACAAXSIAesFkgEDNy4xmAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=932bYqi1BIuH5OUPzeyP4A4&bih=821&biw=1808&hl=pt-BR";
+            window.location.reload();
+        }
+    </script>
     <br/>
   </div>
 </div>
 <div id="sample" style="display: flex; justify-content: center; align-items: center; margin-top: 100px;">
-  <div id="myDiagramDiv" style="border: solid 1px black; width: 90%; height: 500px"></div>
+  <div id="myDiagramDiv" style="border: solid 1px black; width: 60%; height: 700px; background-color: #FFFFFF;"></div>
 </div>
 </body>
 </html>
