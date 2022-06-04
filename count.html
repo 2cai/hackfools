@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<title>Pizza</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+* {
+  box-sizing: border-box;
+}
+
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body style="background-image:url('try2.webp');background-size:cover">
+<!-- This top nav is not part of the sample code -->
+<div class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+<div id="navSide" class="flex flex-col w-full md:w-48 text-gray-700 bg-white flex-shrink-0"></div>
+
+<!-- Navbar (Sits on top) -->
+<div class="w3-top w3-bar w3-xlarge w3-black ">
+    <div id="buttons" style="display: flex; justify-content: center">   
+        <a class="w3-bar-item w3-button" href="index.html">Voltar ao menu</a>
+    <br/>
+    </div>
+</div>
+<div style="display: flex; justify-content: center; align-items: center; margin-top: 100px;">
+    <div style="width: 50%; height: 700px; background-color: black; display: flex; justify-content: center; align-items: center">
+        <script> 
+            var s1=0;
+            var s2=0;
+            var s3=0;
+        </script>
+        <div class="columns">
+            <ul class="price">
+            <li class="header">Melancia</li>
+            <li><span id="myText3" style="color:white;font-size: 50px"></span></li>
+            <button class="button" onclick="increase3()">VOTAR!</button>
+            <script>
+                function increase3(){
+                    s3 = s3+1;
+                    console.log(s3);
+                    updateDisplay3(s3);
+                }
+                function updateDisplay3(s3) {
+                    document.getElementById("myText3").innerHTML = s3;
+                }
+            </script>
+            </ul>
+        </div>
+        <div class="columns">
+            <ul class="price">
+            <li class="header">Erva-doce</li>
+            <li><span id="myText2" style="color:white;font-size: 50px;"></span></li>
+            <button class="button" onclick="increase2()">VOTAR!</button>
+            <script>
+                function increase2(){
+                    s2 = s2+1;
+                    console.log(s2);
+                    updateDisplay2(s2);
+                }
+                function updateDisplay2(s2) {
+                    document.getElementById("myText2").innerHTML = s2;
+                }
+            </script>
+            </ul>
+        </div>
+        <div class="columns">
+            <ul class="price">
+            <li class="header">Calabresa</li>
+            <li><span id="myText" style="color:white;font-size: 50px"></span></li>
+            <button class="button" onclick="increase()">VOTAR!</button>
+            <script>
+                function increase(){
+                    s1 = s1+1;
+                    console.log(s1);
+                    updateDisplay(s1);
+                }
+                function updateDisplay(s1) {
+                    document.getElementById("myText").innerHTML = s1;
+                }
+            </script>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,10 +1,3 @@
-/*
- * GoJS v2.2.10 JavaScript Library for HTML Diagrams, https://gojs.net
- * GoJS and Northwoods Software are registered trademarks of Northwoods Software Corporation, https://www.nwoods.com.
- * Copyright (C) 1998-2022 by Northwoods Software Corporation.  All Rights Reserved.
- * THIS SOFTWARE IS LICENSED.  THE LICENSE AGREEMENT IS AT: https://gojs.net/2.2.10/license.html.
- * DO NOT MODIFY THIS FILE.  DO NOT DISTRIBUTE A MODIFIED COPY OF THE CONTENTS OF THIS FILE.
- */
 (function() { var t;function aa(a){var b=0;return function(){return b<a.length?{done:!1,value:a[b++]}:{done:!0}}}function ca(a){var b="undefined"!=typeof Symbol&&Symbol.iterator&&a[Symbol.iterator];return b?b.call(a):{next:aa(a)}}function ea(a){for(var b,c=[];!(b=a.next()).done;)c.push(b.value);return c}var fa="function"==typeof Object.create?Object.create:function(a){function b(){}b.prototype=a;return new b},ha;
 if("function"==typeof Object.setPrototypeOf)ha=Object.setPrototypeOf;else{var ia;a:{var ja={a:!0},ka={};try{ka.__proto__=ja;ia=ka.a;break a}catch(a){}ia=!1}ha=ia?function(a,b){a.__proto__=b;if(a.__proto__!==b)throw new TypeError(a+" is not extensible");return a}:null}var la=ha;
 function ma(a,b){a.prototype=fa(b.prototype);a.prototype.constructor=a;if(la)la(a,b);else for(var c in b)if("prototype"!=c)if(Object.defineProperties){var d=Object.getOwnPropertyDescriptor(b,c);d&&Object.defineProperty(a,c,d)}else a[c]=b[c];a.vB=b.prototype}

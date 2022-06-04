@@ -145,7 +145,6 @@ PolygonDrawingTool.prototype.modifyPointForGrid = function(p) {
 PolygonDrawingTool.prototype.addPoint = function(p) {
   var shape = this.temporaryShape;
   if (shape === null) return;
-
   // for the temporary Shape, normalize the geometry to be in the viewport
   var viewpt = this.diagram.viewportBounds.position;
   var q = this.modifyPointForGrid(new go.Point(p.x - viewpt.x, p.y - viewpt.y));
